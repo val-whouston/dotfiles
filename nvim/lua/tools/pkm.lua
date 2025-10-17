@@ -75,3 +75,5 @@ nmap("<leader>pkm", ":lua PKMSettings()<cr>", "Open PKM index with NERDTree and 
 nmap("gm", ":lua PKMGoto()<cr>", "Open PKM file under cursor")
 nmap("<leader>pj", ":lua GotoJournal()<cr>", "Open Journal")
 nmap("<leader>pt", ":lua GotoTodo()<cr>", "Open TODO")
+
+vim.api.nvim_create_user_command('PKMSettings', 'lua PKMSettings()', {})
