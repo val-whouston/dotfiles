@@ -10,6 +10,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         map("gs", vim.lsp.buf.signature_help, "Signature Documentation")
         map("gd", vim.lsp.buf.definition, "Goto Definition")
         map("gD", vim.lsp.buf.declaration, "Goto Declaration")
+        map("gd", vim.lsp.buf.definition, "Goto Definition")
 
         map("<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", "Goto Definition in Vertical Split")
 
