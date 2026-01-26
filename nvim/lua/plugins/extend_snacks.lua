@@ -4,7 +4,7 @@ return {
     {
       "<leader>tt",
       function()
-        Snacks.picker.grep({
+        Snacks.picker.grep_buffers({
           prompt = " ",
           search = "^\\s*- \\[ \\]",
           regex = true,
