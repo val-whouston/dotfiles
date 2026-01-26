@@ -1,6 +1,9 @@
 -- I apparently can't have it any other way.
 
 vim.g.gruvbox_italic = 0
+vim.g.gruvbox_material_enable_italic = 0
+vim.g.gruvbox_material_italic = 0
+vim.g.gruvbox_material_disable_italic_comment = 0
 
 return {
   {
@@ -14,11 +17,22 @@ return {
       },
     },
   },
+  {
+    "sainnhe/gruvbox-material",
+    opts = {
+      italic = {
+        strings = false,
+        comments = false,
+        operators = false,
+        folds = false,
+      },
+    },
+  },
   { "cocopon/iceberg.vim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "gruvbox-material",
     },
   },
 }
