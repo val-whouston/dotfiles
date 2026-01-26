@@ -1,8 +1,8 @@
 vim.lsp.config["snyk"] = {
-  cmd = { "snyk", "language-server" },
-  filetypes = { "ruby" },
+  cmd = { "snyk", "language-server", "-l", "debug", "-f", "/Users/williamhouston/.logs/snyk-language-server.log" },
+  filetypes = { "ruby", "javascript" },
   init_options = {
-    activateSnykCode = 'true',
+    activateSnykCode = "true",
     token = os.getenv("SNYK_TOKEN"),
   },
   root_dir = function(bufnr, on_dir)
@@ -19,4 +19,5 @@ vim.lsp.config["snyk"] = {
   end,
   root_markers = { ".git" },
 }
+
 vim.lsp.enable("snyk")
